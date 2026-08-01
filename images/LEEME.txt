@@ -1,0 +1,12 @@
+COLOCA AQUÍ LAS 50 IMÁGENES
+
+Usa exactamente estos nombres:
+01.jpg para la cosa 1
+02.jpg para la cosa 2
+03.jpg para la cosa 3
+...
+50.jpg para la cosa 50
+
+Cada pantalla mostrará solamente una imagen.
+Puedes usar JPG. Para que cargue rápido en celular, procura que cada foto pese menos de 1 MB.
+Si falta una imagen, aparecerá automáticamente el diseño placeholder.svg.

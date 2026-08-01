@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1e1028">
+  <title>Para ti ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-hearts" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span></div>
+
+  <section id="inicio" class="screen active" aria-label="Inicio">
+    <button class="full-screen-page screen-button" data-go="perdon">
+      <main class="hero-card">
+        <p class="small-text">TOCA LA PANTALLA</p>
+        <h1>SÉ QUE MI ERROR<br>TE HIZO SENTIR MAL</h1>
+        <div class="tap-icon">♡</div>
+      </main>
+    </button>
+  </section>
+
+  <section id="perdon" class="screen" aria-label="Perdón">
+    <button class="full-screen-page second screen-button" data-go="cosas">
+      <main class="hero-card">
+        <p class="small-text">POR ESO...</p>
+        <h1>QUIERO PEDIRTE<br>PERDÓN</h1>
+        <p class="subtext">Y demostrarte que sí quiero conocerte mejor.</p>
+        <div class="tap-icon">♡</div>
+      </main>
+    </button>
+  </section>
+
+  <section id="cosas" class="screen">
+    <main class="list-page">
+      <header class="list-header">
+        <p class="eyebrow">HE PRESTADO ATENCIÓN</p>
+        <h1>50 cosas que sé<br>que te gustan</h1>
+        <p>Quiero seguir conociéndote y recordar cada detalle que te hace feliz.</p>
+      </header>
+      <section id="buttonsGrid" class="buttons-grid"></section>
+      <footer class="list-footer">
+        <p>Hecho con cariño y con ganas de hacerlo mejor. PERDONMAE TITIIIIIIII❤️</p>
+        <div class="footer-video-container">
+          <video class="footer-video" autoplay loop muted playsinline controls>
+            <source src="videos/final.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+        </div>
+      </footer>
+    </main>
+  </section>
+
+  <section id="detalle" class="screen">
+    <main class="detail-page">
+      <article class="detail-card">
+        <span id="detailNumber" class="detail-number"></span>
+        <div class="detail-image-wrapper">
+          <img id="detailImage" class="detail-image" alt="" loading="eager">
+        </div>
+        <div id="detailEmoji" class="detail-emoji"></div>
+        <h1 id="detailTitle"></h1>
+        <p id="detailText"></p>
+        <button class="back-button" data-go="cosas">← Volver a las 50 cosas</button>
+      </article>
+    </main>
+  </section>
+
+  <audio id="bgMusic" loop preload="auto"><source src="music/song.mp3" type="audio/mpeg"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
