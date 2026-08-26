@@ -348,7 +348,15 @@ const ITEMS = [
     "emoji": "❤️",
     "texto": "Si llegaste hasta aquí, es porque leíste las 50 cosas que sé sobre ti. Y, aunque todavía me faltan muchísimas más por aprender, quería demostrarte que sí pongo atención, que sí me importan tus gustos y que quiero seguir conociéndote cada día un poquito más. El saber de ti es de las cosas que mas me gustan de mi dia a dia, pues siento que cada dia me vas gustando un poquito mas, y perdón por haber olvidado tu comida favorita. Nunca fue porque no me importaras, al contrario me importas tanto que hice toda esta página con la esperanza de sacarte una sonrisa y demostrarte que quiero hacerlo mejor. Te quiero muchísimo mama pollito. ❤️",
     "imagen": "images/50.jpg"
-  }
+  },
+  {
+  "id": 51,
+  "titulo": "Por si vuelves a entrar ❤️",
+  "emoji": "💌",
+  "texto": "Hola, titiii.CAPAZ Y NO VEAS ESTO NUNCA MÁSS,piiiru, igual quería dejarte algo escrito acá.Tal vez cosas que no digo mucho así, cara a cara, o si las digo no las repito todo el tiempo, o quién sabe, soy medio raro. Hoy es 25 de agosto, estás con tu ANDRÉS, Andrés mlp, lo voy a buscar y lo voy a matar. A veces se siente mal no saber cómo ayudarte cuando te pasan esas cosas. Bueno, igual si estuviese ahí, tampoco sabría cómo ayudarte alkdkasdl. Entonces me pongo a pensar: ¿cómo es que me ayudas tú cuando me siento mal? Y, como sabes, no lo digo, pues suelo comerme yo solo mis problemas. Y es estando ahí. Tu sola presencia me ayuda, me motiva, y espero que la mía te ayude algo en eso, aunque sea un poco. Eres muy importante para mí, para mi corazoncito. No puedo estar 1 día sin saber cómo estás o si comiste. Soy la persona más antisocial del mundo, pero contigo necesito hablar 24/7. Me es tan difícil mostrarme como soy, o como me gustaría ser, y contigo no siento pena ni dificultad. Soy yo. Y a veces me da miedo el futuro, lo que pueda pasar de aquí a 1 mes, a 2, a 3, a 6... Pueden pasar muchas cosas. Yo también sobrepienso un poco. Lo que voy a decir TAL VEZZ te espante un poco, porque creo que no te lo he dicho antes: te amo, titi. Hace un tiempo siento que te amo y es complicado para mí porque, pues, puede que tú no sientas eso hacia mí. O sea, tampoco es necesario, tipo, poco a poco, o no sé. AY, NO SÉ QUÉ ES LO QUE ESTOY ESCRIBIENDO Y LO PEOR ES QUE PROGRAMAR ESTA COSA ES DIFÍCIL. Bueno, ya. No es un “te amo” por decir, es uno de verdad. Tú como persona, como mujer, como todo. TÚ. Te quiero muchísimo y todo lo que tiene que ver contigo es tan lindo. Y yo quisiera ser eso para ti YYY, si Dios quiere, ser el hombre de tu vida. Pero ando luchando por eso. Eres una de mis metas más bonitas. Espero que se me cumpla. Ay, titi, si eso llega a cumplirse, yo juro hacerte la mujel más feli de toti mundiiii, y el verte feliz me hará a mí el hobmre más feliz del mundo. Si lees esto, posiblemente me lo digas y a mí se me caiga la cara de la vergüenzita, peeero, por favor, come mejor, cuídate mucho, sigue adelante, crece, sé feliz. Así sea a mi lado o no, yo quiero verte feliz. Y mientras estés a mi lado, sé libre de decirme cómo te sientes, qué piensas, qué quieres, porque yo solo quiero ser el mejor intento de una súper versión mía. Eso lo acabo de inventar, eh. Te amo, titi <3. Espero NO TE ME ESPANTES. Sigue siendo tú, y solo tú. Mi chica fuerte <3",
+  "imagen": "images/51.jpg",
+  "tipo": "mensaje-especial"
+}
 ];
 
 const screens = [...document.querySelectorAll('.screen')];
@@ -372,7 +380,17 @@ function showScreen(id, updateHash = true) {
 function openDetail(id, updateHash = true) {
   const item = ITEMS.find(x => x.id === Number(id));
   if (!item) return showScreen('cosas', updateHash);
-  document.getElementById('detailNumber').textContent = `${String(item.id).padStart(2, '0')} / 50`;
+  document.getElementById('detailNumber').textContent =
+  item.id === 51
+    ? 'MENSAJE 51'
+    : `${String(item.id).padStart(2, '0')} / 50`;
+
+const detailScreen = document.getElementById('detalle');
+
+detailScreen.classList.toggle(
+  'special-message',
+  item.id === 51
+);
   const image = document.getElementById('detailImage');
   image.src = item.imagen;
   image.alt = `Imagen de ${item.titulo}`;
@@ -388,7 +406,10 @@ function openDetail(id, updateHash = true) {
 function renderButtons() {
   const grid = document.getElementById('buttonsGrid');
   grid.innerHTML = ITEMS.map(item => `
-    <button class="thing-button" data-id="${item.id}">
+    <button
+  class="thing-button ${item.id === 51 ? 'special-message-button' : ''}"
+  data-id="${item.id}"
+>
       <span class="number">${String(item.id).padStart(2, '0')}</span>
       <span class="emoji">${item.emoji}</span>
       <span class="button-title">${item.titulo}</span>
