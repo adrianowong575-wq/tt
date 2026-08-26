@@ -318,6 +318,123 @@ footer {
     object-fit: cover;
 }
 
+/* =========================
+   MENSAJE 51 - ESPECIAL
+========================= */
+
+.special-message {
+  background:
+    radial-gradient(circle at top, rgba(255, 190, 210, 0.18), transparent 40%),
+    linear-gradient(160deg, #120d13 0%, #21131b 50%, #100b0f 100%);
+}
+
+.special-message .detail-card {
+  max-width: 650px;
+  padding: 45px 35px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    0 0 35px rgba(255, 120, 160, 0.08);
+
+  text-align: center;
+}
+
+.special-message #detailNumber {
+  display: inline-block;
+
+  padding: 7px 16px;
+  margin-bottom: 20px;
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #ffd4df;
+}
+
+.special-message #detailEmoji {
+  font-size: 55px;
+  margin-bottom: 10px;
+
+  animation: cartaFlotar 3s ease-in-out infinite;
+}
+
+.special-message #detailTitle {
+  font-size: clamp(28px, 6vw, 42px);
+  margin-bottom: 24px;
+
+  font-family: Georgia, serif;
+  font-weight: 500;
+
+  color: #fff5f7;
+}
+
+.special-message #detailText {
+  max-width: 520px;
+  margin: auto;
+
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.9;
+
+  color: rgba(255, 245, 247, 0.9);
+}
+
+/* Botón 51 en la lista */
+.special-message-button {
+  position: relative;
+
+  border: 1px solid rgba(255, 160, 190, 0.35) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 130, 170, 0.14),
+      rgba(255, 255, 255, 0.05)
+    ) !important;
+
+  box-shadow: 0 10px 30px rgba(255, 100, 150, 0.08);
+}
+
+.special-message-button::after {
+  content: "NUEVO";
+
+  position: absolute;
+  top: 9px;
+  right: 12px;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  background: #fff;
+  color: #21131b;
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Animación del sobre */
+@keyframes cartaFlotar {
+  0%, 100% {
+    transform: translateY(0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
 /* Versión HTML estática */
 .screen { display: none; min-height: 100svh; }
 .screen.active { display: block; animation: appear .45s ease both; }
