@@ -437,3 +437,33 @@ function routeFromHash() {
 window.addEventListener('popstate', routeFromHash);
 renderButtons();
 routeFromHash();
+
+async function registrarVisita() {
+  const contador = document.getElementById("visitCount");
+
+  if (!contador) return;
+
+  try {
+    const respuesta = await fetch(
+      "https://api.counterapi.dev/v1/adriano-pagina-jazmin/visitas/up"
+    );
+
+    if (!respuesta.ok) {
+      throw new Error("Error al registrar visita");
+    }
+
+    const datos = await respuesta.json();
+
+    contador.textContent =
+      datos.count ??
+      datos.value ??
+      datos.data?.up_count ??
+      "♡";
+
+  } catch (error) {
+    console.error("No se pudo registrar la visita:", error);
+    contador.textContent = "♡";
+  }
+}
+
+registrarVisita();
