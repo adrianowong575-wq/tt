@@ -438,14 +438,3 @@ window.addEventListener('popstate', routeFromHash);
 renderButtons();
 routeFromHash();
 
-async function registrarVisita() {
-  try {
-    await fetch(
-      "https://api.counterapi.dev/v1/adriano-pagina-jazmin/visitas/up"
-    );
-  } catch (error) {
-    console.error("No se pudo registrar la visita:", error);
-  }
-}
-
-registrarVisita();
