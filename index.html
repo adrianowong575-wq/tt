@@ -41,6 +41,7 @@
         <h1>50 cosas que sé<br>que te gustan</h1>
         <p>Quiero seguir conociéndote y recordar cada detalle que te hace feliz.</p>
       </header>
+      <button id="openExam" class="exam-launch" type="button">📚 Practicar para el examen de Gestión Empresarial <span>→</span></button>
       <section id="buttonsGrid" class="buttons-grid"></section>
       <footer class="list-footer">
         <p>Hecho con cariño y con ganas de hacerlo mejor. PERDONMAE TITIIIIIIII❤️, tenia el pelo demasiado largo watajai</p>
@@ -69,8 +70,27 @@
     </main>
   </section>
 
+  <section id="examen" class="screen" aria-label="Exámenes de Gestión Empresarial">
+    <main class="exam-page">
+      <div class="exam-top"><button type="button" class="back-button" data-go="cosas">← Volver</button><span class="exam-kicker">COSTA RICA · DÉCIMO AÑO · 2026</span></div>
+      <header class="exam-heading"><p class="eyebrow">UN REPASITO PARA TI 💖</p><h1>Practiquemos para tu examen 📚</h1><p>Escoge una unidad o un tema, responde todas las preguntas y revisa tus resultados. Cada nuevo intento cambia el orden de las respuestas.</p></header>
+      <div id="examSetup" class="exam-panel">
+        <label for="examUnit">Unidad</label><select id="examUnit"></select>
+        <label for="examTopic">Tema</label><select id="examTopic"></select>
+        <label for="examCount">Cantidad de preguntas</label><select id="examCount"><option value="10">10 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las preguntas del tema</option></select>
+        <p id="examAvailable" class="exam-note"></p>
+        <button type="button" id="startExam" class="exam-primary">Comenzar examen 💗</button>
+      </div>
+      <div id="examFormWrap" hidden><div class="exam-status"><span id="examProgress"></span><button type="button" id="examQuit" class="exam-link">Cambiar tema</button></div><form id="examForm"></form><button type="button" id="submitExam" class="exam-primary">Finalizar y corregir examen ✓</button><p id="examWarning" class="exam-warning" role="status"></p></div>
+      <div id="examResults" class="exam-panel" hidden><h2 id="examScore"></h2><p id="examSummary"></p><div id="examCorrections"></div><div class="exam-actions"><button type="button" id="retryExam" class="exam-primary">Intentar otra vez 🔀</button><button type="button" id="newExam" class="exam-secondary">Elegir otro tema</button></div></div>
+      <p class="exam-note exam-disclaimer">Preguntas de práctica elaboradas según el temario del Liceo de Atenas Martha Mirambell Umaña. No son preguntas oficiales. Para cálculos y normativa legal, prevalecen los materiales actualizados de clase.</p>
+    </main>
+  </section>
+
   <audio id="bgMusic" loop preload="auto"><source src="music/song.mp3" type="audio/mpeg"></audio>
   <script src="script.js"></script>
+  <script src="exam-data.js"></script>
+  <script src="exam.js"></script>
  
 </body>
   

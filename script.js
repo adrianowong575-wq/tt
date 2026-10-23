@@ -430,7 +430,7 @@ document.addEventListener('click', event => {
 function routeFromHash() {
   const hash = location.hash.replace('#', '');
   if (hash.startsWith('cosa-')) return openDetail(hash.split('-')[1], false);
-  if (['perdon', 'cosas'].includes(hash)) return showScreen(hash, false);
+  if (['perdon', 'cosas', 'examen'].includes(hash)) return showScreen(hash, false);
   showScreen('inicio', false);
 }
 
