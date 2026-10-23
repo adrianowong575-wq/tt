@@ -41,7 +41,6 @@
         <h1>50 cosas que sé<br>que te gustan</h1>
         <p>Quiero seguir conociéndote y recordar cada detalle que te hace feliz.</p>
       </header>
-      <button id="openExam" class="exam-launch" type="button">📚 Practicar para el examen de Gestión Empresarial <span>→</span></button>
       <section id="buttonsGrid" class="buttons-grid"></section>
       <footer class="list-footer">
         <p>Hecho con cariño y con ganas de hacerlo mejor. PERDONMAE TITIIIIIIII❤️, tenia el pelo demasiado largo watajai</p>
@@ -73,16 +72,16 @@
   <section id="examen" class="screen" aria-label="Exámenes de Gestión Empresarial">
     <main class="exam-page">
       <div class="exam-top"><button type="button" class="back-button" data-go="cosas">← Volver</button><span class="exam-kicker">COSTA RICA · DÉCIMO AÑO · 2026</span></div>
-      <header class="exam-heading"><p class="eyebrow">UN REPASITO PARA TI 💖</p><h1>Practiquemos para tu examen 📚</h1><p>Escoge una unidad o un tema, responde todas las preguntas y revisa tus resultados. Cada nuevo intento cambia el orden de las respuestas.</p></header>
-      <div id="examSetup" class="exam-panel">
+      <header class="exam-heading"><div class="exam-hero-icon" aria-hidden="true">📚<span>♡</span></div><p class="eyebrow">UN REPASITO HECHO CON CARIÑO</p><h1>Un examen para ti<span class="exam-heart"> ♡</span></h1><p>Practica conceptos, diferencias, aplicaciones, análisis de casos y ejercicios trabajados en clase. Elige un tema, responde 10 o 20 preguntas y aprende con cada corrección. 💗</p><div class="exam-hero-tags"><span>✦ A tu ritmo</span><span>♡ Con amor</span><span>✧ Respuestas mezcladas</span></div></header>
+      <div id="examSetup" class="exam-panel"><div class="exam-panel-intro"><span class="exam-panel-icon">💌</span><div><span class="exam-step">TU ESPACIO DE PRÁCTICA</span><h2>¿Qué repasamos hoy?</h2><p>Estudia conceptos, diferencias, aplicaciones, análisis de casos y ejercicios, tal como indica tu temario. 💗</p></div></div>
         <label for="examUnit">Unidad</label><select id="examUnit"></select>
         <label for="examTopic">Tema</label><select id="examTopic"></select>
         <label for="examCount">Cantidad de preguntas</label><select id="examCount"><option value="10">10 preguntas</option><option value="20">20 preguntas</option><option value="all">Todas las preguntas del tema</option></select>
         <p id="examAvailable" class="exam-note"></p>
         <button type="button" id="startExam" class="exam-primary">Comenzar examen 💗</button>
       </div>
-      <div id="examFormWrap" hidden><div class="exam-status"><span id="examProgress"></span><button type="button" id="examQuit" class="exam-link">Cambiar tema</button></div><form id="examForm"></form><button type="button" id="submitExam" class="exam-primary">Finalizar y corregir examen ✓</button><p id="examWarning" class="exam-warning" role="status"></p></div>
-      <div id="examResults" class="exam-panel" hidden><h2 id="examScore"></h2><p id="examSummary"></p><div id="examCorrections"></div><div class="exam-actions"><button type="button" id="retryExam" class="exam-primary">Intentar otra vez 🔀</button><button type="button" id="newExam" class="exam-secondary">Elegir otro tema</button></div></div>
+      <div id="examFormWrap" hidden><div class="exam-form-title"><span>✧ CADA RESPUESTA CUENTA ✧</span><h2>¡Tú puedes con esto! 💞</h2></div><div class="exam-status"><span id="examProgress"></span><button type="button" id="examQuit" class="exam-link">Cambiar tema</button></div><form id="examForm"></form><button type="button" id="submitExam" class="exam-primary">Finalizar y corregir examen ✓</button><p id="examWarning" class="exam-warning" role="status"></p></div>
+      <div id="examResults" class="exam-panel" hidden><div class="exam-result-heart">💗</div><p class="exam-step">HECHO CON MUCHÍSIMO CARIÑO</p><h2 id="examScore"></h2><p id="examSummary"></p><div id="examCorrections"></div><div class="exam-actions"><button type="button" id="retryExam" class="exam-primary">Intentar otra vez 🔀</button><button type="button" id="newExam" class="exam-secondary">Elegir otro tema</button></div></div>
       <p class="exam-note exam-disclaimer">Preguntas de práctica elaboradas según el temario del Liceo de Atenas Martha Mirambell Umaña. No son preguntas oficiales. Para cálculos y normativa legal, prevalecen los materiales actualizados de clase.</p>
     </main>
   </section>

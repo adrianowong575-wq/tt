@@ -15,7 +15,7 @@
     topic.innerHTML='<option value="all">Todos los temas</option>'+topics.map(t=>`<option value="${escapeHTML(t)}">${escapeHTML(t)}</option>`).join('');
     updateAvailable();
   }
-  function updateAvailable(){const n=pool().length; $('examAvailable').textContent=`${n} preguntas disponibles para esta selección. Si eliges más, se utilizarán las ${n} disponibles.`;}
+  function updateAvailable(){const n=pool().length; $('examAvailable').textContent=`${n} preguntas disponibles para esta selección. Cada intento mezcla preguntas y alternativas; aprende la respuesta por su contenido, no por la letra.`;}
   function setup(){ $('examSetup').hidden=false; $('examFormWrap').hidden=true; $('examResults').hidden=true; $('examWarning').textContent=''; }
   function begin(){
     const available=pool(); if(!available.length)return;
@@ -35,7 +35,8 @@
     $('examCorrections').innerHTML=current.map((q,i)=>{const selected=q.options[chosen[i]],ok=selected===q.correct;return `<article class="exam-correction ${ok?'is-right':'is-wrong'}"><strong>${ok?'✓ Correcta':'✕ Para repasar'} · ${i+1}. ${escapeHTML(q.prompt)}</strong><p>Tu respuesta: ${escapeHTML(selected)}</p>${ok?'':`<p><b>Respuesta correcta:</b> ${escapeHTML(q.correct)}</p>`}<p class="exam-explanation">${escapeHTML(q.explanation)}</p></article>`}).join('');
     $('examFormWrap').hidden=true;$('examResults').hidden=false;window.scrollTo({top:0,behavior:'smooth'});
   }
-  $('openExam').addEventListener('click',()=>showScreen('examen'));
+  // El botón se encuentra integrado a la misma cuadrícula que las demás tarjetas.
+  document.getElementById('buttonsGrid').addEventListener('click', e => { if (e.target.closest('#openExam')) showScreen('examen'); });
   unit.addEventListener('change',updateTopics);topic.addEventListener('change',updateAvailable);
   $('startExam').addEventListener('click',begin);
   $('examQuit').addEventListener('click',setup);

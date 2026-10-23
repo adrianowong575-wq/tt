@@ -414,7 +414,7 @@ function renderButtons() {
       <span class="emoji">${item.emoji}</span>
       <span class="button-title">${item.titulo}</span>
       <span class="arrow">›</span>
-    </button>`).join('');
+    </button>`).join('') + `\n    <button id="openExam" class="thing-button exam-grid-button" type="button" aria-label="Practicar examen de Gestión Empresarial">\n      <span class="number">♡</span>\n      <span class="emoji">📚</span>\n      <span class="button-title">Practiquemos para tu examen <small>Un repasito especial para ti 💗</small></span>\n      <span class="arrow">›</span>\n    </button>`;
 
   grid.addEventListener('click', event => {
     const button = event.target.closest('.thing-button');
