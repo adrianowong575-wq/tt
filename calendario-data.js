@@ -56,11 +56,11 @@ const CALENDARIO_NOV = {
     "texto": "Hoy no fue un dia tan lindo para mi, y peor aun cuando me contaste lo de mate, igual incluso casi me MATAN EN LA CALLE, pero sabe algo, apenas la llame y comenzamos a hablar, me sentí muy en paz y feliz, eres la unica persona q puede generar eso en mi, y estoy muy feliz de que te este yendo bien en los cursos, solo te falta mate mi amor y yo se que te ira muy bien. Lo lograrás y si no, me tendrás aquí apoyándote en lo que sea.",
     "imagen": "images/calendario/17.jpg"
   },
-  "19": {
+  "18": {
     "titulo": "Tus logros",
     "emoji": "✨",
     "texto": "Cuando me dices cosas asi tipo, tengo malas noticias, me da micro infartos, y cuando me contaste lo de mate, tenia unas ganas de llorar, genuinamente, el que estes logrando cositas, me conmueve tanto, porque se cuanto te costó hacerlo, nadie me puede decir lo contrario, pq he visto lo que has tenido que hacer, y lo que sacrificas también, te amo mucho mi titi, y mi amar es sincero, tan sincero como sentir que tus logros también fueran míos, me pone tan feliz verte asi de emocionada, asi los demas intenten apagar tu brillo, yo siempre te veo resplandeciente, es lo que me gusta de ti.",
-    "imagen": "images/calendario/19.jpg"
+    "imagen": "images/calendario/18.jpg"
   },
   "20": {
     "titulo": "Mensaje final",
