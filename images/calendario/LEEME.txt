@@ -1,0 +1,8 @@
+FOTOS DEL MINI CALENDARIO DE NOVIEMBRE
+
+Pon aquí la foto de cada día con el número del día (dos dígitos):
+09.jpg, 10.jpg, 11.jpg, 12.jpg, 13.jpg, 14.jpg, 15.jpg, 16.jpg, 17.jpg, 19.jpg, 20.jpg
+
+Aparece como miniatura en el calendario y grande al abrir el día.
+Si falta una foto, se muestra el emoji del día (y un fondo rosado al abrirlo).
+Procura que cada foto pese menos de 1 MB.

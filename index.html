@@ -69,6 +69,38 @@
     </main>
   </section>
 
+  <section id="calendario" class="screen" aria-label="Mini calendario de noviembre">
+    <main class="cal-page">
+      <div class="cal-top"><button type="button" class="back-button" data-go="cosas">← Volver</button></div>
+      <header class="list-header cal-header">
+        <p class="eyebrow">UN MINI CALENDARIO PARA TI</p>
+        <h1>Noviembre<span class="exam-heart"> ♡</span></h1>
+        <p>Cada día que tiene corazoncito guarda un mensajito para ti. Toca el día para abrirlo.</p>
+      </header>
+      <section class="cal-card" aria-label="Calendario de noviembre 2026">
+        <div class="cal-month">NOVIEMBRE 2026</div>
+        <div class="cal-weekdays" aria-hidden="true"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+        <div id="calGrid" class="cal-grid"></div>
+      </section>
+      <p class="cal-hint">♥ = tiene mensajito</p>
+    </main>
+  </section>
+
+  <section id="dia" class="screen" aria-label="Mensaje del día">
+    <main class="detail-page">
+      <article class="detail-card">
+        <span id="dayNumber" class="detail-number"></span>
+        <div class="detail-image-wrapper">
+          <img id="dayImage" class="detail-image" alt="" loading="eager">
+        </div>
+        <div id="dayEmoji" class="detail-emoji"></div>
+        <h1 id="dayTitle"></h1>
+        <p id="dayText"></p>
+        <button class="back-button" data-go="calendario">← Volver al calendario</button>
+      </article>
+    </main>
+  </section>
+
   <section id="examen" class="screen" aria-label="Exámenes de Gestión Empresarial">
     <main class="exam-page">
       <div class="exam-top"><button type="button" class="back-button" data-go="cosas">← Volver</button><span class="exam-kicker">COSTA RICA · DÉCIMO AÑO · 2026</span></div>
@@ -87,6 +119,8 @@
   </section>
 
   <audio id="bgMusic" loop preload="auto"><source src="music/song.mp3" type="audio/mpeg"></audio>
+  <script src="calendario-data.js"></script>
+  <script src="calendario.js"></script>
   <script src="script.js"></script>
   <script src="exam-data.js"></script>
   <script src="exam.js"></script>

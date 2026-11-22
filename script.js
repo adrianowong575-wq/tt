@@ -414,11 +414,11 @@ function renderButtons() {
       <span class="emoji">${item.emoji}</span>
       <span class="button-title">${item.titulo}</span>
       <span class="arrow">›</span>
-    </button>`).join('') + `\n    <button id="openExam" class="thing-button exam-grid-button" type="button" aria-label="Practicar examen de Gestión Empresarial">\n      <span class="number">♡</span>\n      <span class="emoji">📚</span>\n      <span class="button-title">Practiquemos para tu examen <small>Un repasito especial para ti 💗</small></span>\n      <span class="arrow">›</span>\n    </button>`;
+    </button>`).join('') + `\n    <button id="openExam" class="thing-button exam-grid-button" type="button" aria-label="Practicar examen de Gestión Empresarial">\n      <span class="number">♡</span>\n      <span class="emoji">📚</span>\n      <span class="button-title">Practiquemos para tu examen <small>Un repasito especial para ti 💗</small></span>\n      <span class="arrow">›</span>\n    </button>` + `\n    <button id="openCalendario" class="thing-button cal-grid-button" type="button" data-go="calendario" aria-label="Abrir el mini calendario de noviembre">\n      <span class="number">♡</span>\n      <span class="emoji">❤️❓</span>\n      <span class="button-title">Noviembre <small>Toca para descubrir qué hay 💌</small></span>\n      <span class="arrow">›</span>\n    </button>`;
 
   grid.addEventListener('click', event => {
     const button = event.target.closest('.thing-button');
-    if (button) openDetail(button.dataset.id);
+    if (button && button.dataset.id) openDetail(button.dataset.id);
   });
 }
 
@@ -430,7 +430,8 @@ document.addEventListener('click', event => {
 function routeFromHash() {
   const hash = location.hash.replace('#', '');
   if (hash.startsWith('cosa-')) return openDetail(hash.split('-')[1], false);
-  if (['perdon', 'cosas', 'examen'].includes(hash)) return showScreen(hash, false);
+  if (hash.startsWith('dia-')) return openDay(hash.split('-')[1], false);
+  if (['perdon', 'cosas', 'examen', 'calendario'].includes(hash)) return showScreen(hash, false);
   showScreen('inicio', false);
 }
 
